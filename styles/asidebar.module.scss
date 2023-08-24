@@ -44,11 +44,11 @@
 
     text-transform: uppercase;
     font-weight: 600;
-    color:#272743;
+    color: #272743;
 
     &__active:after {
       position: absolute;
-      content: "";
+      content: '';
       bottom: -4px;
       display: block;
       cursor: pointer;
