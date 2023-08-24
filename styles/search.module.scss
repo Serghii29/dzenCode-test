@@ -1,0 +1,13 @@
+.search {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #e8ecee;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 3px 1px #99b9c9;
+  }
+}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-export const AsideBar = () => {
+export const AsideBar: React.FC = () => {
   return (
     <div className="aside-bar">
       <nav className="nav">
