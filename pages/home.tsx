@@ -1,17 +1,18 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import { AsideBar } from '@/components/AsideBar';
 
-const Index: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>My test task</title>
+        <title>dZENcode</title>
       </Head>
 
-      <h1>My app</h1>
+      <AsideBar />
     </>
   );
 };
 
-export default Index;
+export default Home;
