@@ -4,7 +4,7 @@ import { Layout } from '@/components/Layout';
 
 const Users: NextPage = () => {
   return (
-    <Layout title='Users Page'>
+    <Layout title="Users Page">
       <h1>Users Page</h1>
     </Layout>
   );

@@ -3,9 +3,9 @@ import React from 'react';
 import { AsideBar } from '../AsideBar';
 
 type Props = {
-  children: any,
-  title: string
-}
+  children: any;
+  title: string;
+};
 
 export const Layout = ({ children, title }: Props) => {
   return (

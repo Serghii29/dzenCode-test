@@ -6,10 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="This is a test task from dZENcode"
-        />
+        <meta name="description" content="This is a test task from dZENcode" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
