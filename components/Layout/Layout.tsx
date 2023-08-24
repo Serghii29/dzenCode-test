@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import React from 'react';
 import { AsideBar } from '../AsideBar';
+import { Header } from '../Header';
 
 type Props = {
-  children: any;
+  children: React.ReactNode;
   title: string;
 };
 
-export const Layout = ({ children, title }: Props) => {
+export const Layout: React.FC<Props> = ({ children, title }) => {
   return (
     <>
       <Head>
@@ -15,6 +16,7 @@ export const Layout = ({ children, title }: Props) => {
       </Head>
 
       <main>
+        <Header />
         <AsideBar />
 
         {children}
