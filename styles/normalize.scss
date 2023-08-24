@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
