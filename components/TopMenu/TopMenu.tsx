@@ -18,11 +18,7 @@ export const TopMenu: React.FC = () => {
 
       <div className={classes.topmenu__time}>
         <span>{format(time, 'dd MMM, yyyy')}</span>
-        <img
-          src={clock.src}
-          alt="clock"
-          height="15px"
-        />
+        <img src={clock.src} alt="clock" height="15px" />
         <span>{format(time, 'hh:mm a')}</span>
       </div>
     </div>

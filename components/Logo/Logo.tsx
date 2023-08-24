@@ -8,10 +8,7 @@ export const Logo: React.FC = () => {
     <>
       <Link href={'/'}>
         <div className={classes.logo}>
-          <img
-            src={logo.src}
-            alt="logo"
-          />
+          <img src={logo.src} alt="logo" />
 
           <p className={classes.logo__text}>inventory</p>
         </div>
