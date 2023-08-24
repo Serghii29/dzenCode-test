@@ -3,36 +3,26 @@ import React from 'react';
 
 export const AsideBar = () => {
   return (
-    <div className='aside-bar'>
-      <nav className='nav'>
+    <div className="aside-bar">
+      <nav className="nav">
         <div>
-          <Link href={'/orders'}>
-            ORDERS
-          </Link>
+          <Link href={'/orders'}>ORDERS</Link>
         </div>
 
         <div>
-          <Link href={'/groups'}>
-            GROUPS
-          </Link>
+          <Link href={'/groups'}>GROUPS</Link>
         </div>
 
         <div>
-          <Link href={'/products'}>
-            PRODUCTS
-          </Link>
+          <Link href={'/products'}>PRODUCTS</Link>
         </div>
 
         <div>
-          <Link href={'/users'}>
-            USERS
-          </Link>
+          <Link href={'/users'}>USERS</Link>
         </div>
 
         <div>
-          <Link href={'/settings'}>
-            SETTINGS
-          </Link>
+          <Link href={'/settings'}>SETTINGS</Link>
         </div>
       </nav>
     </div>
