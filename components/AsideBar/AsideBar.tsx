@@ -20,69 +20,66 @@ export const AsideBar: React.FC = () => {
       </div>
 
       <nav className={classes.nav}>
-        <div
-          className={classes.nav__link}
-        >
+        <div className={classes.nav__link}>
           <Link
             href={'/orders'}
-            className={pathname === '/orders'
-              ? classes.nav__link__active
-              : classes.nav__link
-          }
+            className={
+              pathname === '/orders'
+                ? classes.nav__link__active
+                : classes.nav__link
+            }
           >
             Orders
           </Link>
         </div>
 
-        <div
-          className={classes.nav__link}
-        >
+        <div className={classes.nav__link}>
           <Link
             href={'/groups'}
-            className={pathname === '/groups'
-              ? classes.nav__link__active
-              : classes.nav__link
-          }
-          >Groups</Link>
+            className={
+              pathname === '/groups'
+                ? classes.nav__link__active
+                : classes.nav__link
+            }
+          >
+            Groups
+          </Link>
         </div>
 
-        <div
-          className={classes.nav__link}
-        >
+        <div className={classes.nav__link}>
           <Link
             href={'/products'}
-            className={pathname === '/products'
-              ? classes.nav__link__active
-              : classes.nav__link
-          }
+            className={
+              pathname === '/products'
+                ? classes.nav__link__active
+                : classes.nav__link
+            }
           >
             Products
           </Link>
         </div>
 
-        <div
-          className={classes.nav__link}
-        >
+        <div className={classes.nav__link}>
           <Link
             href={'/users'}
-            className={pathname === '/users'
-              ? classes.nav__link__active
-              : classes.nav__link
-        }
+            className={
+              pathname === '/users'
+                ? classes.nav__link__active
+                : classes.nav__link
+            }
           >
             Users
           </Link>
         </div>
 
-        <div
-          className={classes.nav__link}
-        >
+        <div className={classes.nav__link}>
           <Link
             href={'/settings'}
-            className={pathname === '/settings'
-              ? classes.nav__link__active
-              : classes.nav__link
-          }
+            className={
+              pathname === '/settings'
+                ? classes.nav__link__active
+                : classes.nav__link
+            }
           >
             Settings
           </Link>
