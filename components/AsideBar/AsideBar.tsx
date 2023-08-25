@@ -26,7 +26,7 @@ export const AsideBar: React.FC = () => {
             className={
               pathname === '/orders'
                 ? classes.nav__link__active
-                : classes.nav__link
+                : ''
             }
           >
             Orders
@@ -39,7 +39,7 @@ export const AsideBar: React.FC = () => {
             className={
               pathname === '/groups'
                 ? classes.nav__link__active
-                : classes.nav__link
+                : ''
             }
           >
             Groups
@@ -52,7 +52,7 @@ export const AsideBar: React.FC = () => {
             className={
               pathname === '/products'
                 ? classes.nav__link__active
-                : classes.nav__link
+                : ''
             }
           >
             Products
@@ -65,7 +65,7 @@ export const AsideBar: React.FC = () => {
             className={
               pathname === '/users'
                 ? classes.nav__link__active
-                : classes.nav__link
+                : ''
             }
           >
             Users
@@ -78,7 +78,7 @@ export const AsideBar: React.FC = () => {
             className={
               pathname === '/settings'
                 ? classes.nav__link__active
-                : classes.nav__link
+                : ''
             }
           >
             Settings
