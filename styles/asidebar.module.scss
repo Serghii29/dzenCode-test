@@ -38,23 +38,24 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  
 
   &__link {
     position: relative;
-
     text-transform: uppercase;
     font-weight: 600;
     color: #272743;
 
-    &__active:after {
+    &__active::after {
       position: absolute;
       content: '';
-      bottom: -4px;
       display: block;
       cursor: pointer;
       width: 100%;
+      bottom: -3px;
       height: 3px;
       background: #87c234;
+      border-radius: 2px;
     }
   }
 }

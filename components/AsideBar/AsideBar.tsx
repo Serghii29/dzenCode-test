@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import avatar from '../../public/avatar.jpeg';
 import settings from '../../public/settings.png';
 import classes from '../../styles/asidebar.module.scss';
-// import cn from 'classnames';
 
 export const AsideBar: React.FC = () => {
+  const { pathname } = useRouter();
+
   return (
     <div className={classes.aside_bar}>
       <div className={classes.aside_bar__user_info}>
@@ -20,26 +22,70 @@ export const AsideBar: React.FC = () => {
       <nav className={classes.nav}>
         <div
           className={classes.nav__link}
-          // className={({ isActive }) =>
-          //   cn(classes.nav__link, { [classes.nav__link__active]: isActive })}
         >
-          <Link href={'/orders'}>Orders</Link>
+          <Link
+            href={'/orders'}
+            className={pathname === '/orders'
+              ? classes.nav__link__active
+              : classes.nav__link
+          }
+          >
+            Orders
+          </Link>
         </div>
 
-        <div className={classes.nav__link}>
-          <Link href={'/groups'}>Groups</Link>
+        <div
+          className={classes.nav__link}
+        >
+          <Link
+            href={'/groups'}
+            className={pathname === '/groups'
+              ? classes.nav__link__active
+              : classes.nav__link
+          }
+          >Groups</Link>
         </div>
 
-        <div className={classes.nav__link}>
-          <Link href={'/products'}>Products</Link>
+        <div
+          className={classes.nav__link}
+        >
+          <Link
+            href={'/products'}
+            className={pathname === '/products'
+              ? classes.nav__link__active
+              : classes.nav__link
+          }
+          >
+            Products
+          </Link>
         </div>
 
-        <div className={classes.nav__link}>
-          <Link href={'/users'}>Users</Link>
+        <div
+          className={classes.nav__link}
+        >
+          <Link
+            href={'/users'}
+            className={pathname === '/users'
+              ? classes.nav__link__active
+              : classes.nav__link
+        }
+          >
+            Users
+          </Link>
         </div>
 
-        <div className={classes.nav__link}>
-          <Link href={'/settings'}>Settings</Link>
+        <div
+          className={classes.nav__link}
+        >
+          <Link
+            href={'/settings'}
+            className={pathname === '/settings'
+              ? classes.nav__link__active
+              : classes.nav__link
+          }
+          >
+            Settings
+          </Link>
         </div>
       </nav>
     </div>
