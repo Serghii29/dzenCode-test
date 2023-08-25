@@ -8,7 +8,7 @@ export const OrdersList: React.FC = () => {
 
   return (
     <div className={classes.order_list}>
-      {orders.map(order => (
+      {orders.map((order) => (
         <OrderItem key={order.id} order={order} />
       ))}
     </div>

@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
 
 interface OrderState {
-  orders: Order[]
+  orders: Order[];
 }
 
 export const initialState: OrderState = {

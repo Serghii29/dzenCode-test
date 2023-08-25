@@ -23,11 +23,7 @@ export const AsideBar: React.FC = () => {
         <div className={classes.nav__link}>
           <Link
             href={'/orders'}
-            className={
-              pathname === '/orders'
-                ? classes.nav__link__active
-                : ''
-            }
+            className={pathname === '/orders' ? classes.nav__link__active : ''}
           >
             Orders
           </Link>
@@ -36,11 +32,7 @@ export const AsideBar: React.FC = () => {
         <div className={classes.nav__link}>
           <Link
             href={'/groups'}
-            className={
-              pathname === '/groups'
-                ? classes.nav__link__active
-                : ''
-            }
+            className={pathname === '/groups' ? classes.nav__link__active : ''}
           >
             Groups
           </Link>
@@ -50,9 +42,7 @@ export const AsideBar: React.FC = () => {
           <Link
             href={'/products'}
             className={
-              pathname === '/products'
-                ? classes.nav__link__active
-                : ''
+              pathname === '/products' ? classes.nav__link__active : ''
             }
           >
             Products
@@ -62,11 +52,7 @@ export const AsideBar: React.FC = () => {
         <div className={classes.nav__link}>
           <Link
             href={'/users'}
-            className={
-              pathname === '/users'
-                ? classes.nav__link__active
-                : ''
-            }
+            className={pathname === '/users' ? classes.nav__link__active : ''}
           >
             Users
           </Link>
@@ -76,9 +62,7 @@ export const AsideBar: React.FC = () => {
           <Link
             href={'/settings'}
             className={
-              pathname === '/settings'
-                ? classes.nav__link__active
-                : ''
+              pathname === '/settings' ? classes.nav__link__active : ''
             }
           >
             Settings

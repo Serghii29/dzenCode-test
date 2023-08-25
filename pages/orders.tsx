@@ -8,8 +8,8 @@ import { useAppDispatch } from '@/store/hooks';
 import { addAllOrders } from '@/store/orderReducer';
 
 type Props = {
-  orders: Order[],
-}
+  orders: Order[];
+};
 
 const Orders: NextPage<Props> = ({ orders }) => {
   const despatch = useAppDispatch();
