@@ -1,0 +1,60 @@
+.aside_bar {
+  width: 120px;
+  height: 100vh;
+  padding: 25px;
+  box-shadow: 10px 0 23px -3px #e8ecee;
+
+  &__user_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .settings_icon {
+      position: absolute;
+      left: 80px;
+      top: 67px;
+      height: 20px;
+      width: 20px;
+      box-shadow: 0 0 12px 3px #99b9c9;
+      padding: 10px;
+      background-color: #fff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #272743;
+
+    &__active::after {
+      position: absolute;
+      content: '';
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      bottom: -3px;
+      height: 3px;
+      background: #87c234;
+      border-radius: 2px;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { AsideBar } from '../AsideBar';
 import { Header } from '../Header';
+import classes from '../../styles/mainlayout.module.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -15,8 +16,8 @@ export const Layout: React.FC<Props> = ({ children, title }) => {
         <title>{title} | dZENcode</title>
       </Head>
 
-      <main>
-        <Header />
+      <Header />
+      <main className={classes.main_container}>
         <AsideBar />
 
         {children}

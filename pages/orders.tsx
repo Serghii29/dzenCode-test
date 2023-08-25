@@ -1,11 +1,12 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { Layout } from '@/components/Layout';
+import { OrdersList } from '@/components/OrdersList';
 
 const Orders: NextPage = () => {
   return (
     <Layout title={'Orders Page'}>
-      <h1>Orders Page</h1>
+      <OrdersList />
     </Layout>
   );
 };
