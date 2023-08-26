@@ -1,10 +1,11 @@
 import { Order } from '@/types.ts/interfaces';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import menu from '../../public/menu.png';
 import { format } from 'date-fns';
 import classes from '../../styles/order_item.module.scss';
 import { BntDelete } from '../BtnDelete/BntDelete';
+import { CustomModal } from '../CustomModal/CustomModal';
 
 type Props = {
   order: Order;
@@ -12,6 +13,7 @@ type Props = {
 
 export const OrderItem: React.FC<Props> = ({ order }) => {
   const { title, date } = order;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={classes.order_item}>
@@ -33,7 +35,17 @@ export const OrderItem: React.FC<Props> = ({ order }) => {
         <p>250 000.50 uah</p>
       </div>
 
-      <BntDelete />
+      <BntDelete
+        onOpenModale={() => setIsOpen(true)}
+      />
+
+      {isOpen && (
+        <CustomModal
+          isOpen={isOpen}
+          selectedItem={order}
+          onCloseModale={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 };
