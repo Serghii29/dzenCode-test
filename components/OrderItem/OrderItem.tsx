@@ -4,7 +4,7 @@ import React from 'react';
 import menu from '../../public/menu.png';
 import { format } from 'date-fns';
 import classes from '../../styles/order_item.module.scss';
-import deleteIcon from '../../public/delete.png';
+import { BntDelete } from '../BtnDelete/BntDelete';
 
 type Props = {
   order: Order;
@@ -33,9 +33,7 @@ export const OrderItem: React.FC<Props> = ({ order }) => {
         <p>250 000.50 uah</p>
       </div>
 
-      <button type="button" className={classes.order_item__btn}>
-        <img src={deleteIcon.src} alt="delete icon" height={'17px'} />
-      </button>
+      <BntDelete />
     </div>
   );
 };

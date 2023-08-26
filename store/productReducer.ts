@@ -1,0 +1,28 @@
+import { Product } from '@/types.ts/interfaces';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import type { RootState } from './store';
+
+interface ProductState {
+  products: Product[];
+}
+
+export const initialState: ProductState = {
+  products: [],
+};
+
+export const productsSlice = createSlice({
+  name: 'product',
+  initialState,
+  reducers: {
+    addAllProducts: (state, action: PayloadAction<Product[]>) => {
+      state.products = action.payload;
+    },
+  },
+});
+
+export const { addAllProducts } = productsSlice.actions;
+
+// Other code such as selectors can use the imported `RootState` type
+export const selectCount = (state: RootState) => state.orders;
+
+export default productsSlice.reducer;
