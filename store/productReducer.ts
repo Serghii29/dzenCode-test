@@ -17,10 +17,13 @@ export const productsSlice = createSlice({
     addAllProducts: (state, action: PayloadAction<Product[]>) => {
       state.products = action.payload;
     },
+    deleteProduct: (state, action: PayloadAction<number>) => {
+      state.products = state.products.filter(({ id }) => id !== action.payload);
+    },
   },
 });
 
-export const { addAllProducts } = productsSlice.actions;
+export const { addAllProducts, deleteProduct } = productsSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectCount = (state: RootState) => state.orders;
