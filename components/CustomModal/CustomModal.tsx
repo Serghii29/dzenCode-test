@@ -46,12 +46,12 @@ const Button = styled.button`
   border: transparent;
   cursor: pointer;
   border-radius: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 
-    &:hover {
-      color: red;
-      background: #fff;
-    }
+  &:hover {
+    color: red;
+    background: #fff;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -64,7 +64,7 @@ const CloseButton = styled.button`
   background: #fff;
   cursor: pointer;
   border: 1px solid #d6e0e5;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     box-shadow: 0 0 12px 3px #99b9c9;
@@ -75,7 +75,7 @@ type Props = {
   isOpen: boolean;
   selectedItem: Order | Product;
   onCloseModale: () => void;
-}
+};
 
 export const CustomModal: React.FC<Props> = ({
   isOpen,
@@ -118,44 +118,25 @@ export const CustomModal: React.FC<Props> = ({
       <ModalWrapper>
         <CloseButton onClick={onCloseModale}>X</CloseButton>
         <Question>Are you sure you want to delete this item...?</Question>
-        {isOrder
-          ? (
-            <Data>{selectedItem.title}</Data>
-          )
-          : (
-            <Data
-              style={{ display: 'flex', alignItems: 'center', gap: '15px' }}
-            >
-              <div className={classes.product_item__progress}></div>
-              <img
-                src={monitorItem.src}
-                alt=" monitor icon"
-                height={'30px'}
-              />
-              <div>
-                <p>{selectedItem.title}</p>
-                <p>{selectedItem.serialNumber}</p>
-              </div>
-            </Data>
-          )
-        }
+        {isOrder ? (
+          <Data>{selectedItem.title}</Data>
+        ) : (
+          <Data style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div className={classes.product_item__progress}></div>
+            <img src={monitorItem.src} alt=" monitor icon" height={'30px'} />
+            <div>
+              <p>{selectedItem.title}</p>
+              <p>{selectedItem.serialNumber}</p>
+            </div>
+          </Data>
+        )}
         <ButtonWrapper>
-          <Button
-            onClick={onCloseModale}
-          >
-            CANCEL
-          </Button>
+          <Button onClick={onCloseModale}>CANCEL</Button>
 
-          <Button
-            onClick={deletedItem}
-          >
-            <img
-              src={deleteIcon.src}
-              alt="delete icon"
-              height={'11px'}
-            />
-              DELETE
-            </Button>
+          <Button onClick={deletedItem}>
+            <img src={deleteIcon.src} alt="delete icon" height={'11px'} />
+            DELETE
+          </Button>
         </ButtonWrapper>
       </ModalWrapper>
     </Modal>

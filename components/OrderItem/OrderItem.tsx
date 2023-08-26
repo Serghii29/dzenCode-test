@@ -35,9 +35,7 @@ export const OrderItem: React.FC<Props> = ({ order }) => {
         <p>250 000.50 uah</p>
       </div>
 
-      <BntDelete
-        onOpenModale={() => setIsOpen(true)}
-      />
+      <BntDelete onOpenModale={() => setIsOpen(true)} />
 
       {isOpen && (
         <CustomModal
