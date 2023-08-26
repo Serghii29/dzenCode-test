@@ -1,0 +1,18 @@
+.btn_delete {
+  margin-left: 15px;
+  padding: 5px;
+  border: transparent;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 3px 1px #99b9c9;
+  }
+
+  &:active {
+    box-shadow: 0 0 12px 3px #99b9c9;
+    background: #99b9c9;
+  }
+}

@@ -1,11 +1,15 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { Layout } from '@/components/Layout';
+import classes from '../styles/products_page.module.scss';
+import { ProductsList } from '@/components/ProductsList/ProductsList';
 
 const Products: NextPage = () => {
   return (
     <Layout title="Products Page">
-      <h1>Products Page</h1>
+      <div className={classes.products_page}>
+        <ProductsList />
+      </div>
     </Layout>
   );
 };
