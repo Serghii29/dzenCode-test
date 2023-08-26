@@ -23,7 +23,7 @@ const Home: NextPage<Props> = ({ orders, products }) => {
   return <Layout title={'Home Page'}>{}</Layout>;
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async() => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const orders = await Service.getAllOrders();
   const products = await Service.getAllProducts();
 

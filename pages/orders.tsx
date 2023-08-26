@@ -16,10 +16,7 @@ const Orders: NextPage = () => {
       <div className={classes.orders_page}>
         <div className={classes.orders_page__header}>
           <div className={classes.add_icon}>
-            <img
-              src={addIcon.src}
-              alt="add icon"
-            />
+            <img src={addIcon.src} alt="add icon" />
           </div>
 
           <span>Orders / {ordersLength}</span>
