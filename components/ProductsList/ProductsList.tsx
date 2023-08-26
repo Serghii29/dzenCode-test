@@ -8,7 +8,7 @@ export const ProductsList: React.FC = () => {
 
   return (
     <div className={classes.products_list}>
-      {products.map(product => (
+      {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}
     </div>

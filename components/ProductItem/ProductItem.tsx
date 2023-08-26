@@ -7,8 +7,8 @@ import { BntDelete } from '../BtnDelete/BntDelete';
 import getSymbolFromCurrency from 'currency-symbol-map';
 
 type Props = {
-  product: Product
-}
+  product: Product;
+};
 
 export const ProductItem: React.FC<Props> = ({ product }) => {
   const { title, serialNumber, guarantee, price, order, date } = product;
@@ -16,11 +16,7 @@ export const ProductItem: React.FC<Props> = ({ product }) => {
   return (
     <div className={classes.product_item}>
       <div className={classes.product_item__progress}></div>
-      <img
-        src={monitor.src}
-        alt="monitor icon"
-        height={'30px'}
-      />
+      <img src={monitor.src} alt="monitor icon" height={'30px'} />
 
       <div>
         <p>{title}</p>
@@ -43,7 +39,7 @@ export const ProductItem: React.FC<Props> = ({ product }) => {
       <p>New</p>
 
       <div>
-        {price.map(oneprice => {
+        {price.map((oneprice) => {
           const isSymbol = oneprice.symbol === 'USD';
 
           return (
@@ -58,9 +54,7 @@ export const ProductItem: React.FC<Props> = ({ product }) => {
         })}
       </div>
 
-      <p className={classes.product_item__group_name}>
-        Some group name
-      </p>
+      <p className={classes.product_item__group_name}>Some group name</p>
 
       <p>Order {order}</p>
 

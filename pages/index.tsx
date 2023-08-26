@@ -9,7 +9,7 @@ import { addAllProducts } from '@/store/productReducer';
 
 type Props = {
   orders: Order[];
-  products: Product[]
+  products: Product[];
 };
 
 const Home: NextPage<Props> = ({ orders, products }) => {
@@ -20,14 +20,10 @@ const Home: NextPage<Props> = ({ orders, products }) => {
     despatch(addAllProducts(products));
   }, []);
 
-  return (
-    <Layout title={'Home Page'}>
-      { }
-    </Layout>
-  );
+  return <Layout title={'Home Page'}>{}</Layout>;
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async() => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const orders = await Service.getAllOrders();
   const products = await Service.getAllProducts();
 
