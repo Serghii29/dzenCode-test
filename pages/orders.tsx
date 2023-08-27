@@ -11,7 +11,7 @@ import { addAllOrders } from '@/store/orderReducer';
 
 type Props = {
   orders: Order[];
-}
+};
 
 const Orders: NextPage<Props> = ({ orders }) => {
   const ordersLength = orders.length;
@@ -38,7 +38,7 @@ const Orders: NextPage<Props> = ({ orders }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async() => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const orders = await Service.getAllOrders();
 
   return {

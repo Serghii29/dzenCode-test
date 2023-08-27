@@ -10,7 +10,7 @@ import { addAllProducts } from '@/store/productReducer';
 
 type Props = {
   products: Product[];
-}
+};
 
 const Products: NextPage<Props> = ({ products }) => {
   const despatch = useAppDispatch();
@@ -28,7 +28,7 @@ const Products: NextPage<Props> = ({ products }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async() => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const products = await Service.getAllProducts();
 
   return {

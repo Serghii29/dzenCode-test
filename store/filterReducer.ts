@@ -24,10 +24,8 @@ export const filterSlice = createSlice({
   },
 });
 
-export const {
-  addfilterByType,
-  addfilterBySpecification,
-} = filterSlice.actions;
+export const { addfilterByType, addfilterBySpecification } =
+  filterSlice.actions;
 
 export const selectCount = (state: RootState) => state.orders;
 

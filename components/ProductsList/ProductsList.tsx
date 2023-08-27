@@ -12,10 +12,9 @@ export const ProductsList: React.FC = () => {
   const router = useRouter();
   const { searchParams } = router.query;
 
-  const {
-    filterByType,
-    filterBySpecification,
-  } = useAppSelector(state => state.filter);
+  const { filterByType, filterBySpecification } = useAppSelector(
+    (state) => state.filter,
+  );
 
   const preparedProducts = getFilteredProducts(
     products,
