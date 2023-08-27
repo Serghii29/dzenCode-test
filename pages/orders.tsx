@@ -38,7 +38,7 @@ const Orders: NextPage<Props> = ({ orders }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async() => {
   const orders = await Service.getAllOrders();
 
   return {
