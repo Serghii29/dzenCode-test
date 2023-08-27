@@ -91,6 +91,7 @@ export const CustomModal: React.FC<Props> = ({
       dispatch(deleteOrder(selectedItem.id));
     } else {
       dispatch(deleteProduct(selectedItem.id));
+      onCloseModale();
     }
   };
 
