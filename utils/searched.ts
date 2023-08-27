@@ -5,5 +5,6 @@ export const searchedOrders = (orders: Order[], query: string = '') => {
   const preparedQuery = query.trim().toLocaleLowerCase();
 
   return orders.filter((order) =>
-    order.title.toLocaleLowerCase().toLocaleLowerCase().includes(preparedQuery));
+    order.title.toLocaleLowerCase().toLocaleLowerCase().includes(preparedQuery),
+  );
 };

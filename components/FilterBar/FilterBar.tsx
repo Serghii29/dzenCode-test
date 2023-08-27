@@ -37,11 +37,8 @@ export const FilterBar: React.FC = () => {
   }, [filterSpecification]);
 
   return (
-    <div className={classes.filter_bar} >
-      <label
-        htmlFor="type-select"
-        className={classes.filter_bar__label}
-      >
+    <div className={classes.filter_bar}>
+      <label htmlFor="type-select" className={classes.filter_bar__label}>
         Type:
         <select
           name="type"
@@ -74,7 +71,7 @@ export const FilterBar: React.FC = () => {
             </option>
           ))}
         </select>
-        </label>
+      </label>
     </div>
   );
 };
