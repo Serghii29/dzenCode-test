@@ -1,13 +1,14 @@
 import { Product } from '@/types.ts/interfaces';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
+import { products } from '../api';
 
 interface ProductState {
   products: Product[];
 }
 
 export const initialState: ProductState = {
-  products: [],
+  products: products,
 };
 
 export const productsSlice = createSlice({
