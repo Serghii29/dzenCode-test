@@ -1,40 +1,14 @@
+import {
+  addfilterBySpecification,
+  addfilterByType,
+} from '@/store/filterReducer';
+import { useAppDispatch } from '@/store/hooks';
 import { Specification, Type } from '@/types.ts/enum';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import classes from '../../styles/filter_bar.module.scss';
 
 export const FilterBar: React.FC = () => {
-  const router = useRouter();
-  const [filterType, setFilterType] = useState('');
-  const [filterSpecification, setSilterSpecification] = useState('');
-
-  const handleFilter = () => {
-    if (filterType.length > 0) {
-      router.replace({
-        query: { type: filterType },
-      });
-    } else {
-      router.replace({}, undefined, { shallow: true });
-    }
-  };
-
-  const handleFilterSpecification = () => {
-    if (filterSpecification.length > 0) {
-      router.replace({
-        query: { specification: filterSpecification },
-      });
-    } else {
-      router.replace({}, undefined, { shallow: true });
-    }
-  };
-
-  useEffect(() => {
-    handleFilter();
-  }, [filterType]);
-
-  useEffect(() => {
-    handleFilterSpecification();
-  }, [filterSpecification]);
+  const dispatch = useAppDispatch();
 
   return (
     <div className={classes.filter_bar}>
@@ -43,7 +17,7 @@ export const FilterBar: React.FC = () => {
         <select
           name="type"
           className={classes.filter_bar__select}
-          onChange={(e) => setFilterType(e.target.value)}
+          onChange={(e) => dispatch(addfilterByType(e.target.value))}
         >
           <option value="">All Types</option>
           {Object.entries(Type).map(([name, value]) => (
@@ -62,7 +36,7 @@ export const FilterBar: React.FC = () => {
         <select
           name="specification"
           className={classes.filter_bar__select}
-          onChange={(e) => setSilterSpecification(e.target.value)}
+          onChange={(e) => dispatch(addfilterBySpecification(e.target.value))}
         >
           <option value="">All Specifications</option>
           {Object.entries(Specification).map(([name, value]) => (

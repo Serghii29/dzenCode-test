@@ -1,12 +1,26 @@
-import { NextPage } from 'next';
-import React from 'react';
+import { GetServerSideProps, NextPage } from 'next';
+import { Service } from '@/services/service';
+import React, { useEffect } from 'react';
 import { Layout } from '@/components/Layout';
 import { OrdersList } from '@/components/OrdersList';
 import classes from '../styles/orders_page.module.scss';
-import { useAppSelector } from '@/store/hooks';
+import { useAppDispatch } from '@/store/hooks';
+import { Order, Product } from '@/types.ts/interfaces';
+import { addAllOrders } from '@/store/orderReducer';
+import { addAllProducts } from '@/store/productReducer';
 
-const Groups: NextPage = () => {
-  const { orders } = useAppSelector((state) => state.orders);
+type Props = {
+  orders: Order[];
+  products: Product[];
+};
+
+const Groups: NextPage<Props> = ({ orders, products }) => {
+  const despatch = useAppDispatch();
+
+  useEffect(() => {
+    despatch(addAllOrders(orders));
+    despatch(addAllProducts(products));
+  }, []);
 
   const ordersLength = orders.length;
 
@@ -20,6 +34,18 @@ const Groups: NextPage = () => {
       </div>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<Props> = async() => {
+  const orders = await Service.getAllOrders();
+  const products = await Service.getAllProducts();
+
+  return {
+    props: {
+      orders,
+      products,
+    },
+  };
 };
 
 export default Groups;

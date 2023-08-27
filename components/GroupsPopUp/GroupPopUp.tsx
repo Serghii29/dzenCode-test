@@ -1,9 +1,9 @@
 import { Order, Product } from '@/types.ts/interfaces';
 import React, { useState } from 'react';
-import { BntDelete } from '../BtnDelete/BntDelete';
+import { BntDelete } from '../BtnDelete';
 import addBtn from '../../public/plus.png';
 import monitorIcon from '../../public/desktop.png';
-import { CustomModal } from '../CustomModal/CustomModal';
+import { CustomModal } from '../CustomModal';
 import classes from '../../styles/group_pop_up.module.scss';
 import style from '../../styles/product_item.module.scss';
 import closeIcon from '../../public/close-icon.png';
