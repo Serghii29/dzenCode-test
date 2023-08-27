@@ -1,6 +1,7 @@
 import { Order } from '@/types.ts/interfaces';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
+import { orders } from '../api';
 
 interface OrderState {
   orders: Order[];
@@ -8,7 +9,7 @@ interface OrderState {
 }
 
 export const initialState: OrderState = {
-  orders: [],
+  orders: orders,
   selectedOrder: null,
 };
 
@@ -35,8 +36,12 @@ export const ordersSlice = createSlice({
   },
 });
 
-export const { addAllOrders, deleteOrder, selectedOrder, deleteSelectedOrder } =
-  ordersSlice.actions;
+export const {
+  addAllOrders,
+  deleteOrder,
+  selectedOrder,
+  deleteSelectedOrder,
+} = ordersSlice.actions;
 
 export const selectCount = (state: RootState) => state.orders;
 
