@@ -45,7 +45,7 @@
       "serialNumber": 109876,
       "isNew": 1,
       "photo": "pathToFile.jpg",
-      "title": "Product 1",
+      "title": "Product 2",
       "type": "Monitors",
       "specification": "Specification 1",
       "guarantee": {
@@ -64,7 +64,7 @@
       "serialNumber": 45678,
       "isNew": 1,
       "photo": "pathToFile.jpg",
-      "title": "Product 1",
+      "title": "Product 3",
       "type": "Monitors",
       "specification": "Specification 2",
       "guarantee": {
