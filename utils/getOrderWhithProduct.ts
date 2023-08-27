@@ -5,7 +5,9 @@ export const getOrderWhithProduct = (
   products: Product[],
 ) => {
   if (orderId !== undefined) {
-    const matchProducts = products.filter(product => product.order === orderId);
+    const matchProducts = products.filter(
+      (product) => product.order === orderId,
+    );
 
     return matchProducts;
   }

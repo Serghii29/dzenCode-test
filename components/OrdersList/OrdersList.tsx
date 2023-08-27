@@ -29,14 +29,14 @@ export const OrdersList: React.FC = () => {
         {preparedOrders.map((order) => (
           <OrderItem key={order.id} order={order} />
         ))}
-        </div>
+      </div>
 
-        {matchOrderWithProducts.length > 0 && isGroups && (
-          <GroupPopUp
-            order={selectedOrder}
-            matchOrderWithProducts={matchOrderWithProducts}
-          />
-        )}
+      {matchOrderWithProducts.length > 0 && isGroups && (
+        <GroupPopUp
+          order={selectedOrder}
+          matchOrderWithProducts={matchOrderWithProducts}
+        />
+      )}
     </div>
   );
 };

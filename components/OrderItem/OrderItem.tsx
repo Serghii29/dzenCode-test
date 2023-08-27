@@ -19,17 +19,14 @@ export const OrderItem: React.FC<Props> = ({ order }) => {
   const { id, title, date } = order;
   const [isOpen, setIsOpen] = useState(false);
 
-  const { products } = useAppSelector(state => state.products);
+  const { products } = useAppSelector((state) => state.products);
 
   const router = useRouter();
   const dispatch = useAppDispatch();
 
   const isOrders = router.asPath === '/orders';
 
-  const matchOrderWithProducts = getOrderWhithProduct(
-    id,
-    products,
-  );
+  const matchOrderWithProducts = getOrderWhithProduct(id, products);
 
   return (
     <div className={classes.order_item}>

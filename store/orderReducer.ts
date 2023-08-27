@@ -23,9 +23,7 @@ export const ordersSlice = createSlice({
       state.orders = state.orders.filter(({ id }) => id !== action.payload);
     },
     selectedOrder: (state, action: PayloadAction<number>) => {
-      const findOrder = state.orders.find(
-        ({ id }) => id === action.payload,
-      );
+      const findOrder = state.orders.find(({ id }) => id === action.payload);
 
       if (findOrder) {
         state.selectedOrder = findOrder;
@@ -37,12 +35,8 @@ export const ordersSlice = createSlice({
   },
 });
 
-export const {
-  addAllOrders,
-  deleteOrder,
-  selectedOrder,
-  deleteSelectedOrder,
-} = ordersSlice.actions;
+export const { addAllOrders, deleteOrder, selectedOrder, deleteSelectedOrder } =
+  ordersSlice.actions;
 
 export const selectCount = (state: RootState) => state.orders;
 

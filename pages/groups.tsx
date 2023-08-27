@@ -14,7 +14,6 @@ const Groups: NextPage = () => {
     <Layout title={'Groups Page'}>
       <div className={classes.orders_page}>
         <div className={classes.orders_page__header}>
-
           <span>Orders / {ordersLength}</span>
         </div>
         <OrdersList />

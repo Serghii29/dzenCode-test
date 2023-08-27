@@ -11,9 +11,9 @@ import { useAppDispatch } from '@/store/hooks';
 import { deleteSelectedOrder } from '@/store/orderReducer';
 
 type Props = {
-  order: Order | null,
-  matchOrderWithProducts: Product[],
-}
+  order: Order | null;
+  matchOrderWithProducts: Product[];
+};
 
 export const GroupPopUp: React.FC<Props> = ({
   order,
@@ -35,22 +35,18 @@ export const GroupPopUp: React.FC<Props> = ({
       <p className={classes.group_pop_up__title}>{order?.title}</p>
 
       <div className={classes.group_pop_up__add_product}>
-        <img
-          src={addBtn.src}
-          alt="add product button"
-          height={'20px'}
-        />
+        <img src={addBtn.src} alt="add product button" height={'20px'} />
 
         <p>Add product</p>
       </div>
 
-      {matchOrderWithProducts.map(product => (
+      {matchOrderWithProducts.map((product) => (
         <>
           <div className={classes.group_pop_up__product_wrapper}>
             <div className={classes.group_pop_up__product_info}>
               <div className={style.product_item__progress}></div>
 
-              <img src={monitorIcon.src} alt="monitor icon" height={'30px'}/>
+              <img src={monitorIcon.src} alt="monitor icon" height={'30px'} />
 
               <div>
                 <p>{product.type}</p>
@@ -63,7 +59,7 @@ export const GroupPopUp: React.FC<Props> = ({
 
             <p>In service</p>
 
-            <BntDelete onOpenModale={() => setIsOpen(true)}/>
+            <BntDelete onOpenModale={() => setIsOpen(true)} />
 
             {isOpen && (
               <CustomModal
