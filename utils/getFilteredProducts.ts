@@ -55,8 +55,8 @@ export const getFilteredProducts = (
       break;
   }
 
-  filterProducts = filterProducts.filter(
-    (product) => product.title.toLowerCase().includes(normalizedQuery),
+  filterProducts = filterProducts.filter((product) =>
+    product.title.toLowerCase().includes(normalizedQuery),
   );
 
   return filterProducts;

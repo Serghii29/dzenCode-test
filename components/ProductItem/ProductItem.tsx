@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import monitor from '../../public/monitor-img.png';
 import { format } from 'date-fns';
 import classes from '../../styles/product_item.module.scss';
-import { BntDelete } from '../BtnDelete/BntDelete';
+import { BntDelete } from '../BtnDelete';
 import getSymbolFromCurrency from 'currency-symbol-map';
-import { CustomModal } from '../CustomModal/CustomModal';
+import { CustomModal } from '../CustomModal';
 
 type Props = {
   product: Product;

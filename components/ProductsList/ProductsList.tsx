@@ -1,21 +1,25 @@
 import { useAppSelector } from '@/store/hooks';
 import React from 'react';
-import { ProductItem } from '../ProductItem/ProductItem';
+import { ProductItem } from '../ProductItem';
 import classes from '../../styles/products_list.module.scss';
 import { useRouter } from 'next/router';
-import { FilterBar } from '../FilterBar/FilterBar';
+import { FilterBar } from '../FilterBar';
 import { getFilteredProducts } from '@/utils/getFilteredProducts';
 
 export const ProductsList: React.FC = () => {
   const { products } = useAppSelector((state) => state.products);
 
-  const { query } = useRouter();
-  const { searchParams, type, specification } = query;
+  const router = useRouter();
+  const { searchParams } = router.query;
+
+  const { filterByType, filterBySpecification } = useAppSelector(
+    (state) => state.filter,
+  );
 
   const preparedProducts = getFilteredProducts(
     products,
-    type as string,
-    specification as string,
+    filterByType,
+    filterBySpecification,
     searchParams as string,
   );
 

@@ -5,7 +5,7 @@ import classes from '../../styles/order_list.module.scss';
 import { useRouter } from 'next/router';
 import { searchedOrders } from '@/utils/searched';
 import { getOrderWhithProduct } from '@/utils/getOrderWhithProduct';
-import { GroupPopUp } from '../GroupsPopUp/GroupPopUp';
+import { GroupPopUp } from '../GroupsPopUp';
 
 export const OrdersList: React.FC = () => {
   const { orders, selectedOrder } = useAppSelector((state) => state.orders);
