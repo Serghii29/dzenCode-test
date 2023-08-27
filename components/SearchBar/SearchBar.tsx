@@ -5,10 +5,9 @@ import classes from '../../styles/search.module.scss';
 export const SearchBar: React.FC = () => {
   const router = useRouter();
   const [searchParams, setSearchParams] = useState('');
-  const [showSearchParams, setShowSearchParams] = useState(false);
 
   const handleSearch = () => {
-    if (showSearchParams && searchParams.length > 0) {
+    if (searchParams.length > 0) {
       router.replace({
         query: { searchParams },
       });
@@ -19,7 +18,7 @@ export const SearchBar: React.FC = () => {
 
   useEffect(() => {
     handleSearch();
-  }, [searchParams, showSearchParams]);
+  }, [searchParams]);
 
   return (
     <input
@@ -28,8 +27,6 @@ export const SearchBar: React.FC = () => {
       placeholder="Search"
       value={searchParams}
       onChange={(e) => setSearchParams(e.target.value)}
-      onFocus={() => setShowSearchParams(true)}
-      onBlur={() => setShowSearchParams(false)}
     />
   );
 };
