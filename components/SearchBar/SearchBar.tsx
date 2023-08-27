@@ -22,8 +22,10 @@ export const SearchBar: React.FC = () => {
   }, [searchParams, showSearchParams]);
 
   return (
-    <input className={classes.search}
-      type="text" placeholder="Search"
+    <input
+      className={classes.search}
+      type="text"
+      placeholder="Search"
       value={searchParams}
       onChange={(e) => setSearchParams(e.target.value)}
       onFocus={() => setShowSearchParams(true)}
